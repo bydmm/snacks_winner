@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  root to: 'snacks#index'
+  root to: 'home#index'
 
-  resource :snacks
+  resources :snacks
+  resources :wishes
+  resources :users
+  resources :sessions do
+    collection do
+      delete :sign_out
+    end
+  end
 end

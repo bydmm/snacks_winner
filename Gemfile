@@ -38,5 +38,16 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development, :test do
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem 'thin'
+  gem 'pry-rails'
+end
+
+gem 'compass-rails'
 gem 'bootstrap3-rails'
-gem "rspec-rails"
+gem 'reform'
+gem 'bootstrap_form'
+
+gem 'bcrypt-ruby', '~> 3.1.2'
