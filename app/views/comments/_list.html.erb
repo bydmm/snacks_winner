@@ -1,11 +1,13 @@
 <div class="comment-system">
   <h3><i class="fa fa-comments"></i> Comments</h3>
-  <% if snack.comments.count > 0 %>
   <ul class="comments-list">
-    <% snack.comments.each do |comment| %>
-      <%= render 'comments/comment', comment: comment %>
+    <% if snack.comments.count > 0 %>
+      <% snack.comments.each do |comment| %>
+        <%= render 'comments/comment', comment: comment %>
+      <% end %>
+    <% else %>
+      <li>No comment yet...</li>
     <% end %>
   </ul>
-  <% end %>
   <%= render 'comments/form', snack: snack %>
 </div>
