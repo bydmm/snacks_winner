@@ -4,9 +4,7 @@ class CommentsController < ApplicationController
     if @form.validate(params[:comment])
       @form.model.user = current_user
       @form.save
-      render action: :success
-    else
-      render action: :error
     end
+    redirect_to :back
   end
 end

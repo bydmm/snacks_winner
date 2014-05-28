@@ -1,5 +1,5 @@
 <% if sign_in? %>
-  <%= form_for(CommentForm.new(Comment.new), remote: true) do |f| %>
+  <%= form_for(CommentForm.new(Comment.new)) do |f| %>
     <div class="media">
       <a class="pull-left" href="#">
         <%= image_tag current_user.avatar_url, class: 'media-object' %>

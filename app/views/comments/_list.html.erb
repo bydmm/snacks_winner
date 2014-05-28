@@ -2,7 +2,7 @@
   <h3><i class="fa fa-comments"></i> Comments</h3>
   <ul class="comments-list">
     <% if snack.comments.count > 0 %>
-      <% snack.comments.each do |comment| %>
+      <% snack.comments.order("comments.id DESC").each do |comment| %>
         <%= render 'comments/comment', comment: comment %>
       <% end %>
     <% else %>
