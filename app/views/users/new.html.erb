@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="sign-up-form">
+    <%= bootstrap_form_for @form, layout: :horizontal  do |f| %>
+      <%= f.text_field :email %>
+      <%= f.text_field :first_name %>
+      <%= f.text_field :last_name %>
+      <%= f.password_field :password %>
+      <%= f.password_field :password_confirmation %>
+      <%= f.form_group do %>
+        <button type="submit" class="btn btn-success">
+          <i class="fa fa-sign-in"></i> Create
+        </a>
+      <% end %>
+    <% end %>
+  </div>
+</div>

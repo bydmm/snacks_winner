@@ -1,0 +1,9 @@
+<%= bootstrap_form_for @form, layout: :horizontal  do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_area :description %>
+  <%= f.form_group do %>
+    <button type="submit" class="btn btn-success">
+      <i class="fa fa-plus"></i> Create
+    </a>
+  <% end %>
+<% end %>

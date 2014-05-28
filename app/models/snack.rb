@@ -3,4 +3,5 @@ class Snack < ActiveRecord::Base
   scope :wishes, -> { where(wish: true) }
 
   has_many :likes
+  has_many :comments
 end

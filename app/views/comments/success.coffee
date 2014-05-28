@@ -1,0 +1,1 @@
+$('.comments-list').append("<%= j render 'comments/comment', comment: @form.model %>")

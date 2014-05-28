@@ -1,0 +1,35 @@
+.snack-show {
+  @include border-radius(6px);
+  background-color: #fff;
+  h3 {
+    @include title;
+  }
+}
+.snack-container {
+  padding: 10px 20px;
+  .edit-btn {
+    color: #f0ad4e;
+  }
+  .delete-btn {
+    color: #d9534f;
+  }
+}
+.snack-bottom {
+  @include border-radius(0 0 6px 6px);
+  padding: 10px 20px 20px 20px;
+  background-color: #fafafa;
+}
+.who-likes {
+  .title {
+    color: #eb7260;
+    margin-bottom: 6px;
+  }
+  ul {
+    li {
+      @include inline-block;
+      img {
+        width: 30px;
+      }
+    }
+  }
+}

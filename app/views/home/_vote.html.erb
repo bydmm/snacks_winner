@@ -1,0 +1,11 @@
+<div class="vote-zone" id="js-vote-<%= snack.id %>">
+  <% if sign_in? %>
+    <%= link_to new_like_path(snack_id: snack.id), class: 'like', remote: true do %>
+      <i class="<%= heart_icon(snack, current_user) %>"></i> <%= snack.likes.count %>
+    <% end %>
+  <% else %>
+    <a class="like">
+      <i class="fa fa-heart"></i> <%= snack.likes.count %>
+    </a>
+  <% end %>
+</div>

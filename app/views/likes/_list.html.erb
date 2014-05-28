@@ -1,0 +1,17 @@
+<% if snack.likes.count > 0 %>
+  <div class="who-likes">
+    <div class="title">
+      <i class="fa fa-heart"></i>
+      Who like this snack?
+    </div>
+    <ul>
+      <% snack.likes.each do |like| %>
+      <li>
+        <a href="" data-toggle="tooltip" data-placement="left" data-original-title="<%= like.user.name %>">
+          <%= image_tag like.user.avatar_url %>
+        </a>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

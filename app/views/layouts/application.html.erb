@@ -19,6 +19,7 @@
   </head>
   <body class="snacks-layouts">
     <%= render 'layouts/nav' %>
+    <%= render :partial => "layouts/flash", :locals => {:flash => flash} %>
     <%= yield %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>

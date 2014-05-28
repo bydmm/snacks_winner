@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="snacks-index">
+    <h3><i class="fa fa-database"></i> Inventory</h3>
+    <ul class="snack-list">
+      <% @home.snacks.each do |snack| %>
+      <li>
+        <a href="<%= snack_path(snack) %>">
+          <%= snack.name %>
+        </a>
+        <%= render 'vote', snack: snack %>
+      </li>
+      <% end %>
+    </ul>
+    <% if sign_in? %>
+    <div class="btn-toolbar">
+      <% if sign_in? %>
+      <a href="<%= new_snack_path %>" class="btn btn-success">
+        <i class="fa fa-plus"></i> Add to Inventory
+      </a>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="snacks-index">
+    <h3><i class="fa fa-gift"></i> Wish List</h3>
+    <ul class="wish-list">
+      <% @home.wishes.each do |wish| %>
+      <li>
+        <a href="<%= snack_path(wish) %>">
+          <%= wish.name %>
+        </a>
+        <%= render 'vote', snack: wish %>
+      </li>
+      <% end %>
+    </ul>
+    <% if sign_in? %>
+    <div class="btn-toolbar">
+      <a href="<%= new_wish_path %>" class="btn btn-success">
+        <i class="fa fa-paper-plane-o"></i> Make a Wish
+      </a>
+    </div>
+    <% end %>
+  </div>
+</div>

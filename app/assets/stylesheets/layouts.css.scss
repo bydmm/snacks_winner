@@ -1,0 +1,85 @@
+body.snacks-layouts {
+  background-color: #e9e0d6;
+  a {
+    color: #29aba4;
+    text-decoration: none;
+  }
+  // .edit-btn {
+  //   color: #5cb85c;
+  // }
+  // .delete-btn {
+  //   color: #d9534f;
+  // }
+  .btn {
+    color: #fff;
+  }
+
+  header {
+    background-color: #354458;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 40px;
+    .brand {
+      float: left;
+      font-size: 20px;
+      color: #e9e0d6;
+      i {
+        color: #eb7260;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .nav {
+      float: right;
+      list-style: none;
+      li {
+        a {
+          color: #e9e0d6;
+          font-size: 14px;
+          &:hover {
+            background-color: rgba(255,255,255, 0.1);
+          }
+        }
+      }
+      .open {
+        > a {
+          background-color: rgba(255,255,255, 0.1);
+        }
+        .dropdown-menu {
+          a {
+            color: #424242;
+          }
+        }
+      }
+    }
+  }
+}
+
+.vote-zone {
+  float: right;
+  font-size: 14px;
+  .like {
+    color: #eb7260;
+  }
+  .bug {
+    margin-left: 10px;
+    color: #354458;
+  }
+}
+
+.wish-form {
+  @include form;
+}
+
+.snack-form {
+  @include form;
+}
+
+.sign-in-form {
+  @include form;
+}
+
+.sign-up-form {
+  @include form;
+}

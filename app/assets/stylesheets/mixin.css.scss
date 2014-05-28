@@ -1,0 +1,25 @@
+@mixin title {
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+  color: #424242;
+  a {
+    font-size: 16px;
+  }
+}
+@mixin goods-list {
+  margin: 0;
+  li {
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px dashed #ccc;
+  }
+}
+@mixin form {
+  @include border-radius(6px);
+  background-color: #fff;
+  padding: 30px 20px 10px 20px;
+}

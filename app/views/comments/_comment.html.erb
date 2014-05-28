@@ -1,0 +1,13 @@
+<div class="media">
+  <a class="pull-left" href="#">
+    <%= image_tag comment.user.avatar_url, class: 'media-object' %>
+  </a>
+  <div class="media-body">
+    <h4 class="media-heading">
+      <b><%= comment.user.name %></b> <span><%= comment.created_at.to_s(:date_time) %></span>
+    </h4>
+    <div class="content">
+      <%= comment.content %>
+    </div>
+  </div>
+</div>

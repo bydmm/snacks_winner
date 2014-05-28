@@ -10,7 +10,14 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  *= require bootstrap
  */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "mixin";
+@import "layouts";
+@import "home";
+@import "snack";
+@import "comment";

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="snack-show">
+    <h3>
+      <%= @snack.name %>
+    </h3>
+    <div class="snack-container">
+      <p><%= @snack.description %></p>
+      <% if sign_in? %>
+      <div class="btns">
+        <%= link_to edit_snack_path(@snack), class: 'edit-btn' do %>
+          <i class="fa fa-pencil-square-o"></i>
+        <% end %>
+        <%= link_to snack_path(@snack), method: :delete, class: 'delete-btn' do %>
+          <i class="fa fa-trash-o"></i>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+    <div class="snack-bottom">
+    <%= render 'likes/list', snack: @snack %>
+    </div>
+  </div>
+
+  <%= render 'comments/list', snack: @snack %>
+</div>

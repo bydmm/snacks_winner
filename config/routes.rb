@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
+  resources :comments
   resources :snacks
   resources :wishes
   resources :users
@@ -9,4 +10,5 @@ Rails.application.routes.draw do
       delete :sign_out
     end
   end
+  resources :likes
 end
