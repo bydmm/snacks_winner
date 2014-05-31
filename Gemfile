@@ -51,3 +51,7 @@ gem 'reform'
 gem 'bootstrap_form'
 
 gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'annotate', ">=2.6.0"
+gem 'twitter-bootstrap-rails-confirm', github: 'bluerail/twitter-bootstrap-rails-confirm', branch: 'bootstrap3'
+gem 'carrierwave'
+gem 'carrierwave_direct'

@@ -21,5 +21,10 @@
 @mixin form {
   @include border-radius(6px);
   background-color: #fff;
-  padding: 30px 20px 10px 20px;
+  form {
+    padding: 20px 20px 10px 20px;
+  }
+  h3 {
+    @include  title;
+  }
 }

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="snack-show">
+    <h3>
+      <%= @finish.snack.name %>
+    </h3>
+    <div class="snack-container">
+      <p><%= @finish.snack.description %></p>
+      <% if sign_in? %>
+      <div class="btn-toolbar">
+        <%= link_to buy_finish_path(@finish), class: 'btn btn-success', method: :delete do %>
+          <i class="fa fa-shopping-cart"></i> Buy
+        <% end %>
+        <%= link_to wish_finish_path(@finish), class: 'btn btn-success', method: :delete do %>
+          <i class="fa fa-paper-plane-o"></i> Make a Wish
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+    <div class="snack-bottom">
+    <%= render 'likes/list', snack: @finish.snack %>
+    </div>
+  </div>
+
+  <%= render 'comments/list', snack: @finish.snack %>
+</div>

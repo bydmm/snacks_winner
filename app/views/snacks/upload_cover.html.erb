@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="snack-form">
+    <h3><i class="fa fa-cloud-upload"></i> Upload Cover</h3>
+    <%= direct_upload_form_for @snack do |f| %>
+      <div class="form-group">
+        <%= f.file_field :cover, class: 'filestyle', 'data-input' => "false", 'data-buttonName' => "btn-primary" %>
+      </div>
+      <button type="submit" class="btn btn-success">
+        <i class="fa fa-cloud-upload"></i> Upload
+      </button>
+    <% end %>
+  </div>
+</div>

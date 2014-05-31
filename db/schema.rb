@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140528071347) do
+ActiveRecord::Schema.define(version: 20140531100826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,22 @@ ActiveRecord::Schema.define(version: 20140528071347) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "finishes", force: true do |t|
+    t.integer  "snack_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "finishes", ["snack_id"], name: "index_finishes_on_snack_id", using: :btree
+
+  create_table "inventories", force: true do |t|
+    t.integer  "snack_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "inventories", ["snack_id"], name: "index_inventories_on_snack_id", using: :btree
 
   create_table "likes", force: true do |t|
     t.integer  "snack_id"
@@ -36,7 +52,7 @@ ActiveRecord::Schema.define(version: 20140528071347) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "wish",        default: false
+    t.string   "cover"
   end
 
   create_table "users", force: true do |t|
@@ -47,5 +63,13 @@ ActiveRecord::Schema.define(version: 20140528071347) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "wishes", force: true do |t|
+    t.integer  "snack_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "wishes", ["snack_id"], name: "index_wishes_on_snack_id", using: :btree
 
 end

@@ -36,4 +36,16 @@ class SnacksController < ApplicationController
     @snack.destroy
     redirect_to root_path
   end
+
+  def upload_cover
+    @snack = Snack.find(params[:id]).cover
+    @snack.success_action_redirect = s3_cover_callback_snack_url(params[:id])
+  end
+
+  def s3_cover_callback
+    @snack = Snack.find(params[:id])
+    @snack.key = params[:key]
+    @snack.save
+    redirect_to root_path
+  end
 end

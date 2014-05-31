@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require bootstrap
 //= require runboot
+//= require twitter/bootstrap/rails/confirm
+//= require bootstrap-filestyle.min
 //= require_tree .

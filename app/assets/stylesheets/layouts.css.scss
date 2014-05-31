@@ -72,6 +72,10 @@ body.snacks-layouts {
   @include form;
 }
 
+.inventory-form {
+  @include form;
+}
+
 .snack-form {
   @include form;
 }

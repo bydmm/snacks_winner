@@ -1,9 +1,13 @@
 class Home
-  def snacks
-    Snack.in_store?.order(:id)
+  def inventories
+    Inventory.order(:id)
   end
 
   def wishes
-    Snack.wishes.order(:id)
+    Wish.order(:id)
+  end
+
+  def finishes
+    Finish.order(:id)
   end
 end

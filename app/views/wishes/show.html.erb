@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="snack-show">
+    <h3>
+      <%= @wish.snack.name %>
+    </h3>
+    <div class="snack-container">
+      <p><%= @wish.snack.description %></p>
+      <% if sign_in? %>
+      <div class="btn-toolbar">
+        <%= link_to buy_wish_path(@wish),
+                    method: :delete,
+                    class: 'btn btn-success',
+                    'data-confirm' => 'Have this wish come true?',
+                    'data-confirm-title' => 'Notice!',
+                    'data-confirm-cancel-class' => 'btn-primary',
+                    'data-confirm-proceed' => 'Buy',
+                    'data-confirm-proceed-class' => 'btn-success' do %>
+          <i class="fa fa-shopping-cart"></i> Buy
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+    <div class="snack-bottom">
+    <%= render 'likes/list', snack: @wish.snack %>
+    </div>
+  </div>
+
+  <%= render 'comments/list', snack: @wish.snack %>
+</div>

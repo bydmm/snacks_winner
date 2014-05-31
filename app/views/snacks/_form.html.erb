@@ -1,4 +1,4 @@
-<%= bootstrap_form_for @form, layout: :horizontal  do |f| %>
+<%= bootstrap_form_for @form, layout: :horizontal, label_col: 'col-sm-2', control_col:  'col-sm-8'  do |f| %>
   <%= f.text_field :name %>
   <%= f.text_area :description %>
   <%= f.form_group do %>

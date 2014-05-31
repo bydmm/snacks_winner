@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="snack-show">
+    <h3>
+      <%= @inventory.snack.name %>
+    </h3>
+    <div class="snack-container">
+      <p><%= @inventory.snack.description %></p>
+      <p><%= image_tag @inventory.snack.cover_url %></p>
+      <% if sign_in? %>
+      <div class="btn-toolbar">
+        <%= link_to @inventory,
+                    method: :delete,
+                    class: 'btn btn-warning',
+                    'data-confirm' => 'Have you finished this snack?',
+                    'data-confirm-title' => 'Notice!',
+                    'data-confirm-cancel-class' => 'btn-primary',
+                    'data-confirm-proceed' => 'Finished',
+                    'data-confirm-proceed-class' => 'btn-danger' do %>
+          <i class="fa fa-cutlery"></i> Finish
+        <% end %>
+        <%= link_to upload_cover_snack_path(@inventory.snack), class: 'btn btn-success' do %>
+          <i class="fa fa-cloud-upload"></i> Upload Cover
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+    <div class="snack-bottom">
+    <%= render 'likes/list', snack: @inventory.snack %>
+    </div>
+  </div>
+
+  <%= render 'comments/list', snack: @inventory.snack %>
+</div>
