@@ -41,7 +41,6 @@ gem 'spring',        group: :development
 group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
-  gem 'thin'
   gem 'pry-rails'
 end
 
@@ -55,3 +54,5 @@ gem 'annotate', ">=2.6.0"
 gem 'twitter-bootstrap-rails-confirm', github: 'bluerail/twitter-bootstrap-rails-confirm', branch: 'bootstrap3'
 gem 'carrierwave'
 gem 'carrierwave_direct'
+gem 'rails_12factor'
+gem 'unicorn'
