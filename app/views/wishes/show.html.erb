@@ -17,6 +17,9 @@
                     'data-confirm-proceed-class' => 'btn-success' do %>
           <i class="fa fa-shopping-cart"></i> Buy
         <% end %>
+        <%= link_to upload_cover_snack_path(@finish.snack), class: 'btn btn-success' do %>
+          <i class="fa fa-cloud-upload"></i> Upload Cover
+        <% end %>
       </div>
       <% end %>
     </div>

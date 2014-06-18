@@ -13,6 +13,9 @@
         <%= link_to wish_finish_path(@finish), class: 'btn btn-success', method: :delete do %>
           <i class="fa fa-paper-plane-o"></i> Make a Wish
         <% end %>
+        <%= link_to upload_cover_snack_path(@finish.snack), class: 'btn btn-success' do %>
+          <i class="fa fa-cloud-upload"></i> Upload Cover
+        <% end %>
       </div>
       <% end %>
     </div>
