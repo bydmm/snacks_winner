@@ -5,6 +5,7 @@
     </h3>
     <div class="snack-container">
       <p><%= @snack.description %></p>
+      <p><%= image_tag @snack.cover_url %></p>
       <% if sign_in? %>
       <div class="btns">
         <%= link_to edit_snack_path(@snack), class: 'edit-btn' do %>

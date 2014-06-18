@@ -5,6 +5,7 @@
     </h3>
     <div class="snack-container">
       <p><%= @wish.snack.description %></p>
+      <p><%= image_tag @wish.snack.cover_url %></p>
       <% if sign_in? %>
       <div class="btn-toolbar">
         <%= link_to buy_wish_path(@wish),

@@ -5,6 +5,7 @@
     </h3>
     <div class="snack-container">
       <p><%= @finish.snack.description %></p>
+      <p><%= image_tag @finish.snack.cover_url %></p>
       <% if sign_in? %>
       <div class="btn-toolbar">
         <%= link_to buy_finish_path(@finish), class: 'btn btn-success', method: :delete do %>
